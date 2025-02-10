@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>BMW Group</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body{
+                background-color: #272727;
+            }
+            
+            nav-link a1{color:gray;margin-left: 80px; font-size: 20px;}
+            img {
+                position: absolute;
+                top: 0px;
+                right: 2px;
+                
+
+            }
+            
+            a{color:gray;margin-left: 80px; font-size: 20px;text-decoration: none}
+            
+            ul{
+                list-style-type: circle;
+                color: black;
+                box-shadow: 1px 5px 35px black ;
+                width: 100%;
+               
+                  
+            }
+            
+            li{
+                margin-left: 20px;
+            }
+            
+            .card {
+  position: relative;
+  background: transparent;
+  width: 300px;
+  height: 300px;
+  border: none;
+}
+
+.card:hover {
+  width: 300px;
+}
+
+.card .container-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #e7e7e7;
+  width: 190px;
+  height: 190px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 1px #1818183d, 2px 2px 3px #18181865, inset 2px 2px 2px #ffffff;
+  transition: all .3s ease-in-out, opacity .3s;
+  transition-delay: .6s, 0s;
+  filter: drop-shadow(4px 9px 21px black);
+}
+
+.card:hover .container-image {
+  opacity: 0;
+  border-radius: 8px;
+  transition-delay: 0s, .6s;
+}
+
+.card .container-image .image-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 125px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 2px #1818188a);
+  transition: all .3s ease-in-out;
+  transition-delay: .4s;
+}
+
+.card:hover .container-image .image-circle {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.card .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #e7e7e7;
+  padding: 20px;
+  width: 190px;
+  height: 190px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 3px 1px #1818183d, 2px 2px 3px #18181865, inset 2px 2px 2px #ffffff;
+  visibility: hidden;
+  transition: .3s ease-in-out;
+  transition-delay: 0s;
+  z-index: 1;
+}
+
+.card:hover .content {
+  width: 290px;
+  height: 190px;
+  visibility: visible;
+  transition-delay: .5s;
+}
+
+.card .content .detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  transition-delay: 0s;
+}
+
+.card:hover .content .detail {
+  color: #181818;
+  opacity: 100%;
+  transition: 1s;
+  transition-delay: .3s;
+}
+
+.card .content .detail span {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.card .content .detail button {
+  background: #b8854b;
+  margin-top: auto;
+  width: 75px;
+  height: 25px;
+  color: #ffffff;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  transition: .3s ease-in-out;
+}
+
+.card .content .detail button:hover {
+  background: #d39f63;
+}
+
+.card .content .product-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card .content .product-image .box-image {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: -25%;
+  width: 100%;
+  height: 115%;
+  opacity: 0;
+  transform: scale(.5);
+  transition: all .5s ease-in-out;
+  transition-delay: 0s;
+}
+
+.card:hover .content .product-image .box-image {
+  top: -25%;
+  left: 0;
+  opacity: 100%;
+  transform: scale(1);
+  transition-delay: .3s;
+}
+
+.card .content .product-image .box-image .img-product {
+  margin: auto;
+  width: 7rem;
+  height: auto;
+}
+
+.fil-shoes1, .fil-shoes2 {
+  fill: #333333
+}
+
+.P2Cont{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.P3Cont{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.P3Cont2{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.P4Cont{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.P4Cont2{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+        
+            .input-group2 {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  min-height: 50px;
+  max-width: 150px;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 15px;
+  border: 1px solid whitesmoke;
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+}
+
+.button--submit2 {
+  min-height: 50px;
+  padding: .5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #666666;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.button--submit2:hover {
+  background-color: red;
+}
+
+.input:focus, .input:focus-visible {
+  border-color: red;
+  outline: none;
+}
+
+            
+          .icons  {color: white}
+          .par4{color: white}
+            
+            
+        </style>
+         <script>
+                
+              function Submit()
+            {
+                setTimeout(() => { location.assign("index.html"); }, 500);
+                alert("Submit has been done successfully.");
+            }  
+                
+                
+                
+            </script>
+        
+    </head>
+    <body>
+                <nav class="navbar navbar-expand-sm  navbar-dark fixed-top"  >
+
+            <div class="container-fluid">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link "  href="#home"><img src="BmwG.png" alt="alt" height="80" width="130"/></a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link a1" href="#BMWG">BMW Group</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#BMW">BMW</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Rolls">Rolls Royce</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#MINI">MINI</a>
+                    </li>
+                </ul>
+            </div>
+              
+              </nav>
+        
+        <div class="P1" id="BMWG">
+            <img src="BMWGR.jpeg" style="float: right; box-shadow: 5px 3px 31px black; border-radius: 20px; margin-top: 85px; margin-right: 80px; width: 45%; height: 350px;" >
+            <p style="margin-top: 190px; color: white;">Automobiles are marketed under the brands <strong style="color: #0066b2">BMW, Mini </strong> and <strong style="color: #0066b2">Rolls-Royce</strong>, and <br> <strong style="color: #0066b2;">motorcycles</strong> are marketed under the brand BMW  Motorrad. In 2017, BMW was the <br> world's fourteenth-largest producer of motor vehicles, with 2,279,503 vehicles produced.<br> The company has significant motor-sport history, especially in touring cars, sports cars, <br>and the Isle of Man TT.</p>
+        </div>
+        
+        <div class="P2" id="BMW">
+             <h1 id="BMW" style="color:#0066b2; border-bottom: 3px solid #0066b2; box-shadow: 1px 5px 35px black ; margin-top: 130px; ">BMW</h1> 
+             <div class="P2Cont">
+                 <div class="card">
+      <div class="container-image">
+          <img src="M5.webp" width="200" style="margin-left: 90px; margin-top:0;">
+      </div>
+      <div class="content">
+        <div class="detail" >
+          <span>BMW <br> M5 2023.</span>
+          <p>595,000</p>
+          <button>
+              buy
+             <a href="payment.html">-</a>
+             
+          </button>
+        </div>
+        <div class="product-image">
+          <div class="box-image">
+            <svg class="img-product" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 116.83 182.61" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path class="fil-shoes2" d=></path><img src="car m5.png" width="180" style="margin-left: 170px; margin-top: 40px;"></g></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+                 
+                 <img src="BMW_logo.png" width="180" style="margin-top: 565px; margin-right: 530px; filter: drop-shadow(4px 9px 21px black);">
+                 
+                     <div class="card">
+      <div class="container-image">
+          <img src="IX.png" width="200" style="margin-left: 90px; margin-top: 40px;">
+      </div>
+      <div class="content">
+        <div class="detail" >
+          <span>BMW <br> IX 2023.</span>
+          <p>425,000</p>
+          <button>Buy <a href="payment.html">-</a>
+          </button>
+        </div>
+        <div class="product-image">
+          <div class="box-image">
+              <svg class="img-product" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 116.83 182.61" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path class="fil-shoes2" </path> <img src="car ix.png" width="170" style="margin-left: 90px; margin-top:30px;"></g></svg>
+                                                                                                                            
+          </div>
+        </div>
+      </div>
+    </div>
+             </div>
+             
+        </div>
+        
+        <div class="P3" id="Rolls">
+           <h1 id="Rolls" style="color:#0066b2; border-bottom: 3px solid #0066b2; box-shadow: 1px 5px 35px black ; margin-top: 130px; ">Rolls Royce</h1> 
+            <div class="P3Cont">
+                <div class="card">
+      <div class="container-image">
+          <img src="Cullinan.png" width="170" style="margin-left: 90px; margin-top:30px;">
+      </div>
+      <div class="content">
+        <div class="detail" >
+          <span>Rolls Royce<br> CULLINAN 2023.</span>
+          <p>2,799,000</p>
+          <button>Buy  <a href="payment.html">-</a></button>
+        </div>
+        <div class="product-image">
+          <div class="box-image">
+            <svg class="img-product" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 116.83 182.61" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path class="fil-shoes2" ></path><img src="RR.png" width="200" style="margin-left: 90px; margin-top: 40px;"></g></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+                 <div class="card">
+      <div class="container-image">
+          <img src="DAWN.png" width="120" style="margin-right: 30px; margin-bottom: 25px; bottom: 10px; ">
+      </div>
+      <div class="content">
+        <div class="detail" >
+          <span>Rolls Royce<br> DAWN 2023.</span>
+          <p>2,999,000</p>
+          <button>Buy  <a href="payment.html">-</a></button>
+        </div>
+        <div class="product-image">
+          <div class="box-image">
+            <svg class="img-product" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 116.83 182.61" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path class="fil-shoes2" d="href"></path><img src="RR.png" width="200" style="margin-left: 90px; margin-top: 40px;"></g></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+                 <div class="card">
+      <div class="container-image">
+          <img src="ghost.png" width="190" style="margin-left: 90px; margin-top: 20px;">
+      </div>
+      <div class="content">
+        <div class="detail" >
+          <span>Rolls Royce<br> Ghost 2023.</span>
+          <p>2,100,000</p>
+          <button>Buy  <a href="payment.html">-</a></button>
+        </div>
+        <div class="product-image">
+          <div class="box-image">
+            <svg class="img-product" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 116.83 182.61" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path class="fil-shoes2" d=""></path><img src="RR.png" width="200" style="margin-left: 90px; margin-top: 40px;"></g></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+                
+            </div>
+           
+                <div class="P3Cont2">
+                 <div class="card">
+      <div class="container-image">
+          <img src="Phan.png" width="170" style="margin-left: 90px; margin-top: 30px;">
+      </div>
+      <div class="content">
+        <div class="detail" >
+          <span>Rolls Royce<br> Phantom 2023.</span>
+          <p>3,098,000</p>
+          <button>Buy  <a href="payment.html">-</a></button>
+        </div>
+        <div class="product-image">
+          <div class="box-image">
+            <svg class="img-product" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 116.83 182.61" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path class="fil-shoes2" d=" "></path><img src="RR.png" width="200" style="margin-left: 90px; margin-top: 40px;"></g></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+                    <img src="RR.png" width="250" style="margin-top: 1385px; margin-right: 510px; filter: drop-shadow(4px 9px 42px black);">
+                 <div class="card">
+      <div class="container-image">
+          <img src="Wra.png" width="180" style="margin-left: 90px; margin-top: 40px;">
+      </div>
+      <div class="content">
+        <div class="detail" >
+          <span>Rolls Royce<br> Wraith 2023.</span>
+          <p>1,300,000</p>
+          <button>Buy  <a href="payment.html">-</a></button>
+        </div>
+        <div class="product-image">
+          <div class="box-image">
+            <svg class="img-product" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 116.83 182.61" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path class="fil-shoes2" d=""><img src="RR.png" width="200" style="margin-left: 90px; margin-top: 40px;"></path></g></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+            </div>
+        </div>
+        
+        <div class="P4" id="MINI">
+            <h1 id="MINI" style="color:#0066b2; border-bottom: 3px solid #0066b2; box-shadow: 1px 5px 35px black ; margin-top: 130px; ">MINI</h1>
+            <div class="P4Cont">
+            <div class="card">
+      <div class="container-image">
+          <img src="MC.png" width="150" style="margin-right: 10px; margin-top: 45px;">
+      </div>
+      <div class="content">
+        <div class="detail" >
+          <span>MINI<br> Cooper 2023.</span>
+          <p>169,000</p>
+          <button>Buy  <a href="payment.html">-</a></button>
+        </div>
+        <div class="product-image">
+          <div class="box-image">
+            <svg class="img-product" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 116.83 182.61" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path class="fil-shoes2" d=""></path><img src="Mini-L.png" width="150" style="margin-left: 90px; margin-top: 70px;"></g></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+                    <img src="Mini-L.png" width="210" style="margin-top: 1860px; margin-right: 510px; filter: drop-shadow(4px 9px 42px black);">
+                 <div class="card">
+      <div class="container-image">
+          <img src="CM.png" width="130" style="margin-right:  40px; margin-top: 40px;">
+      </div>
+      <div class="content">
+        <div class="detail" >
+          <span>MINI<br> CountryMan 2023.</span>
+          <p>129,000</p>
+          <button>Buy  <a href="payment.html">-</a></button>
+        </div>
+        <div class="product-image">
+          <div class="box-image">
+            <svg class="img-product" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 116.83 182.61" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path class="fil-shoes2" d=""></path><img src="Mini-L.png" width="150" style="margin-left: 90px; margin-top: 70px;"></g></svg>
+          </div>
+        </div>
+      </div>
+    </div>     
+            </div>
+            <div class="P4Cont2">
+                <div class="card">
+      <div class="container-image">
+          <img src="MCC.png" width="180" style="margin-left: 90px; margin-top: 40px;">
+      </div>
+      <div class="content">
+        <div class="detail" >
+          <span>MINI<br> Coupe 2023.</span>
+          <p>177,000</p>
+          <button>Buy <a href="payment.html">-</a></button>
+        </div>
+        <div class="product-image">
+          <div class="box-image">
+              <svg class="img-product" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 116.83 182.61" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path class="fil-shoes2" d=""></path><img src="Mini-L.png" width="150" style="margin-left: 90px; margin-top: 70px;"></g></svg>
+          </div>
+        </div>
+      </div>
+    </div> 
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+         <br><br><br><br><br><br><br><br><br><br>
+         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+        
+        
+        
+       <div class="icons"><ion-icon name="pin"></ion-icon> Location : Dubai industrial city - Level: Ground Floorr </div> 
+
+<pre>
+    
+
+</pre>
+
+<div class="icons"> <ion-icon name="mail"></ion-icon> Email: Traction.cars@hotmail.com
+</div>
+<pre>
+    
+
+</pre>
+
+
+
+<div class="icons"><ion-icon name="call"></ion-icon> Call: +971 556707798</div>
+
+
+
+<p class="par4 ">Subscribe to our latest news, and more:</p> 
+
+
+ 
+        
+        
+        
+<div class="input-group2">
+    <input type="email" class="input" id="Email" name="Email" placeholder="enter your email" autocomplete="off">
+    <input class="button--submit2" value="Subscribe" onclick="Submit()" type="submit">
+</div>
+
+    </body>
+</html>

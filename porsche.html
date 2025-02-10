@@ -1,0 +1,659 @@
+<html> 
+    <head> 
+         <title>porsche</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script><!-- comment --> 
+         
+                <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <style> 
+            body{ 
+                background: #1e1e23; 
+            } 
+             
+            .black{ 
+             overflow: hidden; 
+             margin: 0; 
+            } 
+            .conta{ 
+                display: flex; 
+                justify-content: space-around; 
+                margin-top: 125px; 
+                margin-right: 50px; 
+            } 
+ 
+             
+            .L1{width: 260px; height: 150px; float: right; margin-top: 70px;margin-right:  100px; border-bottom: 5px solid #CC0000;box-shadow: 1px 5px 70px black; padding: 7px;} 
+             .L2{width: 260px; height: 150px; float: left; margin-top: 70px;margin-left:90px; border-bottom: 5px solid #CC0000; box-shadow: 1px 5px 35px black; padding: 7px;} 
+             .L3{width: 260px; height: 150px; float: left; margin-top: 65px;margin-left: 150px; border-bottom: 5px solid #CC0000; box-shadow: 1px 5px 35px black; padding: 8px;} 
+             .L4{width: 60px; height: 60px; float:left; margin-top: 10px;margin-left: 10px} 
+               
+             .L1:hover { 
+             box-shadow: 10px 15px 20px black; 
+             transform: scale(1.2);  
+             }  
+              
+             .L2:hover { 
+             box-shadow: 10px 15px 20px black; 
+             transform: scale(1.2);  
+             }  
+              
+             .L3:hover { 
+             box-shadow: 10px 15px 20px black; 
+             transform: scale(1.2);  
+             }  
+              
+             button { 
+ position: relative; 
+ overflow: hidden; 
+ outline: none; 
+ cursor: pointer; 
+ border-radius: 50px; 
+ background-color: black; 
+ border: solid 4px #CC0000; 
+ font-family: inherit; 
+ margin-top: 100px;margin-left: 40px; 
+ width: 20%; height: 60px; 
+      
+ 
+} 
+ 
+.default-btn,.hover-btn { 
+ background-color:black; 
+ display: -webkit-box; 
+ display: -moz-box; 
+ display: -ms-flexbox; 
+ display: -webkit-flex; 
+ display: flex; 
+ align-items: center; 
+ gap: 15px; 
+ padding: 15px 20px; 
+ border-radius: 50px; 
+ font-size: 17px; 
+ font-weight: 500; 
+ text-transform: uppercase; 
+ transition: all .3s ease; 
+  
+} 
+ 
+.hover-btn { 
+ position: absolute; 
+ inset: 0; 
+ background-color: rgb(23,25,28); 
+ transform: translate(0%,100%); 
+ 
+} 
+ 
+.default-btn span { 
+ color: whitesmoke; 
+} 
+ 
+.hover-btn span { 
+ color: whitesmoke; 
+} 
+ 
+button:hover .default-btn { 
+ transform: translate(0%,-100%); 
+  
+} 
+ 
+button:hover .hover-btn { 
+ transform: translate(0%,0%); 
+} 
+ 
+ 
+.card { 
+  width: 190px; 
+  height: 254px; 
+  background: #1e1e23; 
+  border: 3px solid #CC0000; 
+  border-radius: 20px; 
+  text-align: center; 
+  color: white; 
+} 
+ 
+.card:hover { 
+  width: 190px; 
+  height: 254px; 
+  background: rgb(255, 255, 255); 
+  border: 2px solid rgb(200, 200, 200); 
+  border-radius: 20px; 
+  background-color: #dfdfdf; 
+  transition: all .5s; 
+  color: black; 
+ 
+} 
+ 
+.secondAnimation { 
+  --hoverContorno: #959595; 
+} 
+ 
+.secondAnimation:hover, 
+.secondAnimation:focus { 
+  -webkit-animation: cardAnimacion 1.4s; 
+  animation: cardAnimacion 1.4s; 
+  box-shadow: 0 0 0 0.8em rgba(255, 255, 255, 0); 
+  border-radius: 20px; 
+} 
+ 
+@-webkit-keyframes cardAnimacion { 
+  0% { 
+    box-shadow: 0 0 0 0 var(--hoverContorno); 
+  } 
+} 
+ 
+@keyframes cardAnimacion { 
+  0% { 
+    box-shadow: 0 0 0 0 var(--hoverContorno); 
+  } 
+} 
+ 
+ 
+ /* === ============================================page2 ===*/ 
+  
+  
+  
+ .page2{ 
+                display: flex; 
+                justify-content: space-around; 
+                margin-top: 125px; 
+                margin-right: 50px; 
+            }
+.L12{width: 230px; height: 150px; float: right; margin-top: 70px;margin-right:  100px; border-bottom: 5px solid #CC0000;box-shadow:
+1px 5px 70px black; padding: 7px;} 
+             .L22{width: 260px; height: 150px; float: left; margin-top: 70px;margin-left:90px; border-bottom: 5px solid #CC0000; box-shadow: 1px 5px 35px black; padding: 7px;} 
+            
+  .L12:hover { 
+             box-shadow: 10px 15px 20px black; 
+             transform: scale(1.2);  
+             }  
+              
+             .L22:hover { 
+             box-shadow: 10px 15px 20px black; 
+             transform: scale(1.2);  
+             }  
+              
+             .L32:hover { 
+             box-shadow: 10px 15px 20px black; 
+             transform: scale(1.2);  
+             }  
+            .b2 { 
+ position: relative; 
+ overflow: hidden; 
+ outline: none; 
+ cursor: pointer; 
+ border-radius: 50px; 
+ background-color: black; 
+ border: solid 4px #CC0000; 
+ font-family: inherit; 
+ margin-top: 100px;margin-left: 40px; 
+ width: 20%; height: 60px; 
+  
+      
+ 
+} 
+ 
+.default-btn2,.hover-btn2 { 
+ background-color:black; 
+ display: -webkit-box; 
+ display: -moz-box; 
+ display: -ms-flexbox; 
+ display: -webkit-flex; 
+ display: flex; 
+ align-items: center; 
+ gap: 15px; 
+ padding: 15px 20px; 
+ border-radius: 50px; 
+ font-size: 17px; 
+ font-weight: 500; 
+ text-transform: uppercase; 
+ transition: all .3s ease; 
+  
+  
+} 
+ 
+.hover-btn2 { 
+ position: absolute; 
+ inset: 0; 
+ background-color: rgb(23,25,28); 
+ transform: translate(0%,100%); 
+ 
+} 
+ 
+.default-btn2 span { 
+ color: whitesmoke; 
+} 
+ 
+.hover-btn2 span { 
+ color: whitesmoke; 
+} 
+ 
+button:hover .default-btn2 { 
+ transform: translate(0%,-100%); 
+  
+} 
+ 
+button:hover .hover-btn2 { 
+ transform: translate(0%,0%); 
+} 
+ 
+ 
+.card2 { 
+  width: 190px; 
+  height: 254px; 
+  background: #1e1e23; 
+  border: 3px solid #CC0000; 
+  border-radius: 20px; 
+  text-align: center; 
+  color: white; 
+ 
+ 
+} 
+ 
+.card2:hover { 
+  width: 190px; 
+  height: 254px; 
+  background: rgb(255, 255, 255); 
+  border: 2px solid rgb(200, 200, 200); 
+  border-radius: 20px; 
+  background-color: #dfdfdf; 
+  transition: all .5s; 
+  color: black; 
+   
+ 
+ 
+} 
+ 
+.secondAnimation2 { 
+  --hoverContorno: #959595; 
+} 
+ 
+.secondAnimation2:hover, 
+.secondAnimation2:focus { 
+  -webkit-animation: cardAnimacion 1.4s; 
+  animation: cardAnimacion 1.4s; 
+  box-shadow: 0 0 0 0.8em rgba(255, 255, 255, 0); 
+  border-radius: 20px; 
+} 
+ 
+@-webkit-keyframes cardAnimacion2 { 
+  0% { 
+    box-shadow: 0 0 0 0 var(--hoverContorno); 
+  } 
+} 
+ 
+@keyframes cardAnimacion2 { 
+  0% { 
+    box-shadow: 0 0 0 0 var(--hoverContorno); 
+  } 
+} 
+ 
+ 
+/* === ============================================page3 ===*/ 
+  
+  
+  
+ .page3{ 
+                display: flex; 
+                justify-content: space-around; 
+                margin-top: 125px; 
+                margin-right: 50px; 
+            } 
+              .L13{width: 220px; height: 120px; float: right; margin-top: 70px;margin-right:  100px; border-bottom: 5px solid #CC0000;box-shadow: 1px 5px 70px black; padding: 7px;} 
+             .L23{width: 260px; height: 120px; float: left; margin-top: 70px;margin-left:90px; border-bottom: 5px solid #CC0000; box-shadow: 1px 5px 35px black; padding: 7px;} 
+            
+ 
+  .L13:hover { 
+             box-shadow: 10px 15px 20px black; 
+             transform: scale(1.2);  
+             }  
+              
+             .L23:hover { 
+             box-shadow: 10px 15px 20px black; 
+             transform: scale(1.2);  
+             }  
+              
+             .L33:hover { 
+             box-shadow: 10px 15px 20px black; 
+             transform: scale(1.2);  
+             }  
+            .b3 { 
+ position: relative; 
+ overflow: hidden; 
+ outline: none;
+cursor: pointer; 
+ border-radius: 50px; 
+ background-color: black; 
+ border: solid 4px #CC0000; 
+ font-family: inherit; 
+ margin-top: 100px;margin-left: 40px; 
+ width: 20%; height: 60px; 
+  
+      
+ 
+} 
+ 
+.default-btn3,.hover-btn3 { 
+ background-color:black; 
+ display: -webkit-box; 
+ display: -moz-box; 
+ display: -ms-flexbox; 
+ display: -webkit-flex; 
+ display: flex; 
+ align-items: center; 
+ gap: 15px; 
+ padding: 15px 20px; 
+ border-radius: 50px; 
+ font-size: 17px; 
+ font-weight: 500; 
+ text-transform: uppercase; 
+ transition: all .3s ease; 
+  
+  
+} 
+ 
+.hover-btn3 { 
+ position: absolute; 
+ inset: 0; 
+ background-color: rgb(23,25,28); 
+ transform: translate(0%,100%); 
+ 
+} 
+ 
+.default-btn3 span { 
+ color: whitesmoke; 
+} 
+ 
+.hover-btn3 span { 
+ color: whitesmoke; 
+} 
+ 
+button:hover .default-btn3 { 
+ transform: translate(0%,-100%); 
+  
+} 
+ 
+button:hover .hover-btn3 { 
+ transform: translate(0%,0%); 
+} 
+ 
+ 
+.card3 { 
+  width: 190px; 
+  height: 254px; 
+  background: #1e1e23; 
+  border: 3px solid #CC0000; 
+  border-radius: 20px; 
+  text-align: center; 
+  color: white; 
+ 
+ 
+} 
+ 
+.card3:hover { 
+  width: 190px; 
+  height: 254px; 
+  background: rgb(255, 255, 255); 
+  border: 2px solid rgb(200, 200, 200); 
+  border-radius: 20px; 
+  background-color: #dfdfdf; 
+  transition: all .5s; 
+  color: black; 
+   
+ 
+ 
+} 
+ 
+.secondAnimation3 { 
+  --hoverContorno: #959595; 
+} 
+ 
+.secondAnimation3:hover, 
+.secondAnimation3:focus { 
+  -webkit-animation: cardAnimacion 1.4s; 
+  animation: cardAnimacion 1.4s; 
+  box-shadow: 0 0 0 0.8em rgba(255, 255, 255, 0); 
+  border-radius: 20px; 
+} 
+ 
+@-webkit-keyframes cardAnimacion3 { 
+  0% { 
+    box-shadow: 0 0 0 0 var(--hoverContorno); 
+  } 
+} 
+ 
+@keyframes cardAnimacion3 { 
+  0% { 
+    box-shadow: 0 0 0 0 var(--hoverContorno); 
+  } 
+} 
+ 
+ 
+ 
+ 
+ 
+             
+        </style> 
+    </head> 
+    <body> 
+        
+         
+         <h1 id="vehicles" style="color:#dfdfdf; border-bottom: 3px solid #CC0000; box-shadow: 1px 5px 35px black ; text-align: center ">PORCHE CAYENNE </h1>  
+         
+        <div id="vehicles" class="black"> 
+            <img class="L4"  src="logo por.png"/> 
+           
+            <div class="conta"> 
+           
+<div class="firstAnimation"> 
+    <div class="secondAnimation"> 
+        <div class="card"> 
+            <br><br><br><br> 
+            <strong>Porsche Cayenne Coupe <br> 2022</strong> 
+        </div> 
+    </div> 
+</div> 
+             
+        <button> 
+  <div class="default-btn"> 
+    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#FFF" height="20" width="20" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle r="3" cy="12" cx="12"></circle></svg> 
+    <span>price: 419,000</span> 
+  </div> 
+          
+          
+  <div class="hover-btn"> 
+    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#ffd300" height="20" width="20" viewBox="0 0 24 24"><circle r="1" cy="21" cx="9"></circle><circle r="1" cy="21" cx="20"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> 
+   <span ><a href="payment.html">buy Now</a></span>
+  </div> 
+</button> 
+         
+ 
+<div class="firstAnimation"> 
+    <div class="secondAnimation"> 
+        <div class="card"> 
+            <br> 
+            <strong>Porsche Cayenne Coupe 3.0L V6 2022: Body Type
+Coupe ,No. of Cylinders
+6,Transmission Type
+Automatic Transmission,Horsepower
+300 - 400 HP,Fuel Type
+Gasoline</strong> 
+        </div> 
+    </div> 
+</div> 
+            </div>  
+         
+             
+             
+             
+       <img class="L1"  src="cayenne f.png"/> 
+        <img class="L2"  src="cayenne s.png"/> 
+        <img class="L3"  src="cayenne b.png"/> 
+       <br><br><br><br><br><br><br><br><br><br><br><br> 
+        
+          
+          
+         
+         
+             
+             
+             
+             
+        
+          </div> 
+        <p>   <br> <br> </p><!-- comment --> 
+         
+  <!---------------------------------------------------------------------------->
+<h1 id="vehicles" style="color:#dfdfdf; border-bottom: 3px solid #CC0000; box-shadow: 1px 5px 35px black ;text-align: center ">PORSCHE MACAN</h1>
+  <div id="vehicles" class="black"> 
+   
+         <div class="page2"> 
+              
+       
+              
+              
+              
+              
+              
+           
+<div class="firstAnimation2"> 
+    <div class="secondAnimation2"> 
+        <div class="card2"> 
+            <br><br><br><br> 
+            <strong>porche MACAN  <br> 2023</strong> 
+        </div> 
+    </div> 
+</div> 
+             
+        <button class="b2"> 
+  <div class="default-btn2"> 
+    <svg class="css-i6dzq12" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#FFF" height="20" width="20" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle r="3" cy="12" cx="12"></circle></svg> 
+    <span>price: 359,000</span> 
+  </div> 
+          
+          
+  <div class="hover-btn2"> 
+    <svg class="css-i6dzq12" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#ffd300" height="20" width="20" viewBox="0 0 24 24"><circle r="1" cy="21" cx="9"></circle><circle r="1" cy="21" cx="20"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> 
+   <span ><a href="payment.html">buy Now</a></span>
+  </div> 
+</button> 
+         
+ 
+<div class="firstAnimation2"> 
+    <div class="secondAnimation2"> 
+        <div class="card2"> 
+            <br> 
+            <strong>PORSCHE MACAN Touring 2023 : Body Type
+SUV,No. of Cylinders
+4,Transmission Type
+Automatic Transmission,
+Horsepower
+200 - 300 HP,Fuel Type
+Gasoline</strong> 
+        </div> 
+    </div> 
+</div> 
+            </div>  
+        
+   
+        <img class="L12"  src="macan f.png"/> 
+        <img class="L22"  src="macan b.png"/> 
+         
+              
+        
+             
+       
+       <br><br><br><br><br><br><br><br><br><br><br><br> 
+        
+                     
+              
+              
+              
+              
+              
+              
+         
+         
+             
+             
+             
+             
+        
+          </div> 
+        <p>   <br> <br> </p> 
+         <!----------------------------------------------------------------------------> 
+         
+           
+                
+         <h1 id="vehicles" style="color:#dfdfdf; border-bottom: 3px solid #CC0000; box-shadow: 1px 5px 35px black ; text-align: center ">PORCHE GTS </h1>  
+    <div id="vehicles" class="black"> 
+   
+         <div class="page3"> 
+              
+       
+              
+              
+              
+              
+              
+           
+<div class="firstAnimation3"> 
+    <div class="secondAnimation3"> 
+        <div class="card3"> 
+            <br><br><br><br> 
+            <strong>PORSCHE 718 BOXTER GTS <br> 2020</strong> 
+        </div> 
+    </div> 
+</div> 
+             
+        <button class="b3"> 
+  <div class="default-btn3"> 
+    <svg class="css-i6dzq13" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#FFF" height="20" width="20" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle r="3" cy="12" cx="12"></circle></svg> 
+    <span>price: 515,000</span> 
+  </div> 
+          
+          
+  <div class="hover-btn3"> 
+    <svg class="css-i6dzq13" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="#ffd300" height="20" width="20" viewBox="0 0 24 24"><circle r="1" cy="21" cx="9"></circle><circle r="1" cy="21" cx="20"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> 
+    <span ><a href="payment.html">buy Now</a></span>
+  </div> 
+</button> 
+         
+ 
+<div class="firstAnimation3"> 
+    <div class="secondAnimation3"> 
+        <div class="card3"> 
+            <br> 
+            <strong>PORSCHE 718 BOXTER GTS </br>Body Type
+Soft Top Convertible,No. of Cylinders
+6,Transmission Type
+Automatic Transmission,
+Horsepower
+300 - 400 HP,Fuel Type
+Gasoline</strong> 
+        </div> 
+    </div> 
+</div> 
+            </div>  
+        
+   
+        <img class="L13"  src="gtsf.png"/> 
+        <img class="L23"  src="gts.png"/> 
+              
+              
+        
+             
+       
+       <br><br><br><br><br><br><br><br><br><br><br><br> 
+        
+                     
+              
+              
+              
+          </div> 
+        <p>   <br> <br> </p> 
+              
+              
+       
+    </body> 
+</html>

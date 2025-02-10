@@ -1,0 +1,668 @@
+<html>  
+    <head>  
+          
+<style>  
+    body{background:#333333;}  
+      
+    .card1 {  
+     margin-left:70px;  
+  overflow: visible;  
+  width: 190px;  
+  height: 254px;  
+}  
+.card2 {  
+     margin-right:15px;  
+  overflow: visible;  
+  width: 190px;  
+  height: 254px;  
+} 
+.card3 {  
+     margin-right:90px;  
+  overflow: visible;  
+  width: 190px;  
+  height: 254px;  
+} 
+.cont1{ display: flex;  
+justify-content: space-around;  
+}  
+.cont2{ display: flex;  
+justify-content: space-around;  
+}  
+.cont3{ display: flex;  
+justify-content: space-around;  
+} 
+.cont4{ display: flex;  
+justify-content: space-around;  
+}
+/*card style*/  
+.content {  
+  width: 100%;  
+  height: 100%;  
+  transform-style: preserve-3d;  
+  transition: transform 300ms;  
+  box-shadow: 0px 0px 10px 1px #000000ee;  
+  border-radius: 5px;  
+}  
+/*2 background*/  
+.front, .back {  
+  background-color: #151515;  
+  position: absolute;  
+  width: 100%;  
+  height: 100%;  
+  backface-visibility: hidden;  
+  -webkit-backface-visibility: hidden;  
+  border-radius: 5px;  
+}  
+/*1 background*/  
+.back {  
+  width: 100%;  
+  height: 100%;  
+  justify-content: center;  
+  display: flex;  
+  align-items: center;  
+  overflow: hidden;  
+}  
+/*C, CLA*/  
+.back::before {  
+  position: absolute;  
+  content: ' ';  
+  display: block;  
+  width: 90px;  
+  height: 160%;  
+  background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);  
+  animation: rotation_481 5000ms infinite linear;  
+}  
+  
+.back-content {  
+  position: absolute;  
+  width: 90%;  
+  height: 99%;  
+  background-color: #151515;  
+  border-radius: 5px;  
+  color: white;  
+  display: flex;  
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center;  
+  gap: 30px;  
+}  
+/*Backward rotation*/  
+.card1:hover .content {  
+  transform: rotateY(180deg);  
+}  
+.card2:hover .content {  
+  transform: rotateY(180deg);  
+}  
+.card3:hover .content {  
+  transform: rotateY(180deg);  
+} 
+  
+@keyframes rotation_481 {  
+  0% {  
+    transform: rotateZ(0deg);  
+  }  
+  
+  0% {  
+    transform: rotateZ(360deg);  
+  }  
+}  
+  
+.front {  
+  transform: rotateY(180deg);  
+  color: white;  
+}  
+  
+.front .front-content {  
+  position: absolute;  
+  width: 100%;  
+  height: 100%;  
+  padding: 10px;  
+  display: flex;  
+  flex-direction: column;  
+  justify-content: space-between;  
+}  
+  
+.front-content .badge {  
+  background-color: #00000055;  
+  padding: 2px 10px;  
+  border-radius: 10px;  
+  backdrop-filter: blur(2px);  
+  width: fit-content;  
+}  
+  
+.description {  
+  box-shadow: 0px 0px 10px 5px #00000088;  
+  width: 100%;  
+  padding: 10px;  
+  background-color: #00000099;  
+  backdrop-filter: blur(5px);  
+  border-radius: 5px;  
+}  
+  
+.title {  
+  font-size: 11px;  
+  max-width: 100%;  
+  display: flex;  
+  justify-content: space-between;  
+}  
+  
+.title p {  
+  width: 50%;  
+}  
+.front .image {  
+  position: absolute;  
+  width: 100%;  
+  height: 100%;  
+  object-fit: cover;  
+  object-position: center;  
+  animation: floating 2600ms infinite linear;   
+}  
+@keyframes floating {  
+  0% {  
+    transform: translateY(0px);  
+  }  
+  
+  50% {  
+    transform: translateY(10px);  
+  }  
+  
+  100% {  
+    transform: translateY(0px);  
+  }  
+}  
+/*info*/  
+button {  
+  width: 30em;  
+  position: relative;  
+  text-align:left ;  
+  height: 10.5em;  
+  border: 3px ridge #149CEA;  
+  outline: none;  
+  background-color: transparent;  
+  color: white;  
+  transition: 1s;  
+  border-radius: 0.3em;  
+  font-size: 16px;  
+  font-weight: lighter;  
+  margin-left: 380px;  
+}  
+/*2 lines*/  
+button::after {  
+  content: "";  
+  position: absolute;  
+  top: -10px;  
+  left: 3%;  
+  width: 95%;  
+  height: 10%;  
+  background-color: #333333;  
+  transition: 0.5s;  
+  transform-origin: center;  
+}  
+  
+button::before {  
+  content: "";  
+  transform-origin: center;  
+  position: absolute;  
+  top: 100%;  
+  left: 3%;  
+  width: 95%;  
+  height: 10%;  
+  background-color: #333333;  
+  transition: 0.5s;  
+}  
+  
+button:hover::before, button:hover::after {
+    transform: scale(0)  
+}  
+  
+button:hover {  
+  box-shadow: inset 0px 0px 25px #1479EA;  
+}   
+
+
+
+
+
+
+
+    .input-group2 {
+  display: flex;
+  align-items: center;
+ 
+  
+      
+ 
+}
+
+.input {
+  min-height: 50px;
+  max-width: 150px;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 15px;
+  border: 1px solid whitesmoke;
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+}
+
+.button--submit2 {
+  min-height: 50px;
+  padding: .5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #666666;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.button--submit2:hover {
+  background-color: red;
+}
+
+.input:focus, .input:focus-visible {
+  border-color: red;
+  outline: none;
+}
+
+            
+          .icons  {color: white}
+          .page4{margin-right:1000px}
+         
+            
+</style>  
+        
+        
+        
+         <script>
+                
+              function Submit()
+            {
+                setTimeout(() => { location.assign("index.html"); }, 500);
+                alert("Submit has been done successfully.");
+            }  
+                
+                
+              
+            </script>
+        
+    </head>  
+    <body>  
+    <nav class="Navbar navbar-expand-sm: "Navbar navbar-expand-sm bg-danger navbar-dark fixed-top">  
+            <div class="container-fluid">  
+                  <ul class="navbar-nav">  
+                  <ul>  
+                      <li>   
+                        <a class="nav-link "  href="#container"><img src="Mercedes-Benz_Logo.png" alt="alt" height="60" width="240"/></a> 
+</li>  
+                  </ul>  
+                </ul>  
+            </div>  
+    </nav>  
+        <i style="color:#959595"><hr></i>  
+          <br>  
+        <strong><i style="color:#959595"><br><hr><br></i></strong>  
+<div class="cont1">  
+        <div class="card2">  
+  <div class="content">  
+    <div class="back">  
+      <div class="back-content">  
+        <strong>C300 Mercedes-Benz 2023</strong>  
+      </div>  
+          
+    </div>  
+      <div class="front">  
+        
+      <div class="image">  
+          <img src="Mercedes-Benz_C300.png" height="250" width="270"/>  
+      </div>  
+  
+        <div class="front-content">  
+        <small class="badge">2023 Mercedes-Benz C300</small>  
+        <div class="description">  
+          <div class="title">  
+            <p class="title">  
+                <strong>  Price 659,000 <br><a href="payment.html"> buy now </a></strong> 
+            </p>  
+            <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>   
+     
+         
+         <div class="card2">  
+  <div class="content">  
+    <div class="back">  
+      <div class="back-content">  
+        <strong>Mercedes Benz CLA 2023</strong>  
+    </div>  
+  </div>  
+      <div class="front">  
+        
+      <div class="image">  
+          <img src="Mercedes_Benz_CLA.png" height="250" width="290"/>  
+      </div>  
+  
+        <div class="front-content">  
+        <small class="badge">Mercedes Benz CLA 2023</small>  
+        <div class="description">  
+          <div class="title">  
+            <p class="title">  
+               <strong>  Price 659,000 <br><a href="payment.html"> buy now </a></strong> 
+            </p>  
+            <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>   
+    </br>  
+ <div class="cont1">  
+        <div class="card3">  
+  <div class="content">  
+    <div class="back">  
+      <div class="back-content">  
+        <strong>MERCEDES-BENZ S680 MAYBACH 2023</strong>  
+      </div>  
+          
+    </div>  
+      <div class="front">  
+        
+      <div class="image">  
+          <img src="MAYBACH.png" height="170" width="270"/>  
+      </div>  
+  
+        <div class="front-content">  
+        <small class="badge">MERCEDES-BENZ S680 MAYBACH 2023</small>  
+        <div class="description">  
+          <div class="title">  
+            <p class="title">  
+                <strong>  Price 659,000 <br><a href="payment.html"> buy now </a></strong> 
+            </p><svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>
+     
+     <div class="cont1">  
+        <div class="card2">  
+  <div class="content">  
+    <div class="back">  
+      <div class="back-content">  
+        <strong>Mercedes-Benz|E-Class 2023</strong>  
+      </div>  
+          
+    </div>  
+      <div class="front">  
+        
+      <div class="image">  
+          <img src="E-class.png" height="250" width="280"/>  
+      </div>  
+  
+        <div class="front-content">  
+        <small class="badge">Mercedes-Benz|E-Class 2023</small>  
+        <div class="description">  
+          <div class="title">  
+            <p class="title">  
+                <strong>  Price 659,000 <br><a href="payment.html"> buy now </a></strong> 
+            </p>  
+            <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>
+   
+ </div> 
+ </div>
+</div>
+    
+  
+    <h1 id="vehicles" style="color:#dfdfdf; border-bottom: 3px solid #959595; box-shadow: 1px 5px 35px black ; text-align: center ">hatchback</h1>     
+         <br>  
+<div class="cont2">  
+        <div class="card2">  
+  <div class="content">  
+    <div class="back">  
+      <div class="back-content">  
+        <strong>Mercedes A 2023</strong>  
+      </div>      
+    </div>  
+      <div class="front">  
+        
+      <div class="image">  
+          <img src="A-class.png" height="220" width="330"/>  
+      </div>  
+  
+        <div class="front-content">  
+        <small class="badge">Mercedes A 2023</small>  
+        <div class="description">  
+          <div class="title">  
+            <p class="title">  
+               <strong>  Price 659,000 <br><a href="payment.html"> buy now </a></strong> 
+            </p>  
+            <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg> 
+</div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>   
+     
+</div> 
+     <h1 id="vehicles" style="color:#dfdfdf; border-bottom: 3px solid #959595; box-shadow: 1px 5px 35px black ; text-align: center ">Electric</h1>     
+     <br>    
+<div class="cont3">  
+    
+    
+        <div class="card2">  
+  <div class="content">  
+    <div class="back">  
+      <div class="back-content">  
+        <strong>EQC | Mercedes Benz | 2022</strong>  
+      </div>      
+    </div>  
+      <div class="front">  
+        
+      <div class="image">  
+          <img src="EQC_2022.png" height="230" width="270"/>  
+      </div>  
+  
+        <div class="front-content">  
+        <small class="badge">EQC | Mercedes Benz | 2022</small>  
+        <div class="description">  
+          <div class="title">
+              <p class="title">  
+                <strong>  Price 659,000 <br><a href="payment.html"> buy now </a></strong> 
+            </p>  
+            <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div> 
+     
+    <div class="cont3">  
+        <div class="card2">  
+  <div class="content">  
+    <div class="back">  
+      <div class="back-content">  
+        <strong>EQE | Mercedes Benz | 2023</strong>  
+      </div>      
+    </div>  
+      <div class="front">  
+        
+      <div class="image">  
+          <img src="EQE.png" height="270" width="300"/>  
+      </div>  
+  
+        <div class="front-content">  
+        <small class="badge">EQE | Mercedes Benz | 2023</small>  
+        <div class="description">  
+          <div class="title">  
+            <p class="title">  
+                <strong>  Price 659,000 <br><a href="payment.html"> buy now </a></strong> 
+            </p>  
+              
+            <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg> 
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div> 
+        </div>
+    </br>
+        <div class="cont3">  
+        <div class="card3">  
+  <div class="content">  
+    <div class="back">  
+      <div class="back-content">  
+        <strong>EQS | Mercedes Benz | 2023</strong>  
+      </div>      
+    </div>  
+      <div class="front">  
+        
+      <div class="image">  
+          <img src="Mercedes_EQS.png" height="200" width="250"/>  
+      </div>  
+  
+        <div class="front-content">  
+        <small class="badge">EQS | Mercedes Benz | 2023</small>  
+        <div class="description">  
+          <div class="title">  
+            <p class="title">  
+              <strong>  Price 659,000 <br><a href="payment.html"> buy now </a></strong> 
+            </p>  
+              
+            <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>
+            
+            <div class="cont3">  
+        <div class="card2">  
+  <div class="content">  
+    <div class="back">  
+      <div class="back-content">  
+        <strong>EQA | Mercedes Benz | 2023</strong>  
+      </div>      
+    </div>  
+      <div class="front">  
+        
+      <div class="image">  
+          <img src="Mercedes_EQA.png" height="230" width="270"/>  
+      </div>  
+  
+        <div class="front-content">  
+        <small class="badge">EQA | Mercedes Benz | 2023</small>  
+        <div class="description">  
+          <div class="title">  
+            <p class="title">  
+            <strong>  Price 659,000 <br><a href="payment.html"> buy now </a></strong> 
+            </p><svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>
+            </div>      
+            </div>
+            </div>
+    
+ <h1 id="vehicles" style="color:#dfdfdf; border-bottom: 3px solid #959595; box-shadow: 1px 5px 35px black ; text-align: center ">Coupe</h1> 
+ <br>      
+                <div class="cont4">  
+        <div class="card2">  
+  <div class="content">  
+    <div class="back">  
+      <div class="back-content">  
+        <strong>Mercedes-Benz GLE 63s AMG 2023</strong>  
+      </div>      
+    </div>  
+      <div class="front">  
+        
+      <div class="image">  
+          <img src="Mercedes-Benz_GLE.png" height="230" width="270"/>  
+      </div>  
+  
+        <div class="front-content">  
+        <small class="badge">Mercedes-Benz GLE 63s AMG 2023</small>  
+        <div class="description">  
+          <div class="title">  
+            <p class="title">  
+               <strong>  Price 659,000 <br><a href="payment.html"> buy now </a></strong>  
+            </p>  
+              
+            <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>
+                    </div>
+                    
+                    
+                    <div class="page4">
+                        
+                                     
+    <br><br><br><br><br><br><br><br><br>
+                                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+        
+        
+        <div class="loc">
+       <div class="icons"><ion-icon name="pin"></ion-icon> Location: Dubai industrial city- Level: Ground Floorr </div> 
+
+<pre>
+    
+
+</pre>
+
+<div class="icons"> <ion-icon name="mail"></ion-icon> Email: Traction.cars@hotmail.com
+</div>
+<pre>
+    
+
+</pre>
+
+
+
+<div class="icons"><ion-icon name="call"></ion-icon> Call: +971 556707798</div>
+
+
+
+<p class="par4 ">Subscribe to our latest news, and more:</p> 
+
+        </div>
+ 
+        
+        
+        
+<div class="input-group2">
+    <input type="email" class="input" id="Email" name="Email" placeholder="enter your email" autocomplete="off">
+    <input class="button--submit2" value="Subscribe" onclick="Submit()" type="submit">
+</div>
+               
+                        
+                        
+                        
+                    </div>
+       
+    </body>  
+</html>
